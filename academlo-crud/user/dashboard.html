@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CRUD - Dashboard</title>
+
+	<!-- bootstrap CDN -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<!-- font awesome CDN -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+	<!-- custom CSS -->
+	<link rel="stylesheet" href="../assets/css/styles.css">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
+</head>
+<body>
+	<!-- navbar -->
+	<div class="container mt-2 col-md-10">
+		<nav class="navbar bg-light">
+			<a href="#" class="navbar-brand">
+				<!-- <img src="../assets/img/logo.png" class="d-inline-block algn-top" alt="Logo" height="45px"> -->
+				<img src="../assets/img/logo.png" alt="Logo" width="18%">
+			</a>
+		</nav>
+	</div>
+
+	<!-- add/edit car -->
+	<div class="container mt-3 col-md-10">
+		<div class="row justify-content-end">
+			<button id="addCarButton" type="button" class="btn btn-success"><i class="fas fa-plus-circle"></i></button>
+		</div>
+	</div>
+
+	<!-- edit/add car -->
+	<div class="container mt-3 col-md-10">
+		<div id="card-add-car" class="card">
+			<form id="form-add-car">
+				<div class="card-body">
+					<div class="row">
+						<!-- select year -->
+						<div class="col-md-4 form-group">
+							<label for="year">Year</label>
+							<input type="number" id="year" min="1998" max="2022" class="form-control" placeholder="Select a year" required>
+						</div>
+						<!-- select model -->
+						<div class="col-md-4 form-group">
+							<label for="model">Model</label>
+							<input type="text" id="model" class="form-control" placeholder="Corvette, Suburban, S3..." required>
+						</div>
+						<!-- select brand -->
+						<div class="col-md-4 form-group">
+							<label for="brand">Brand</label>
+							<input type="text" id="brand" class="form-control" placeholder="GM, Nissan, Ford..." required>
+						</div>
+					</div>
+					<div class="row">
+						<!-- select type -->
+						<div class="col-md-3 form-group">
+							<label for="type">Type</label>
+							<input type="text" id="type" class="form-control" placeholder="Sedan, 4X4, SUV..." required>
+						</div>
+						<!-- select color -->
+						<div class="col-md-3 form-group">
+							<label for="color">Color</label>
+							<input type="text" id="color" class="form-control" placeholder="Gray, White, Black..." required>
+						</div>
+						<!-- select doors -->
+						<div class="col-md-2 form-group">
+							<label for="doors">Doors</label>
+							<input type="number" min="2" max="8" id="doors" class="form-control" placeholder="Select doors" required>
+						</div>
+						<!-- select owners -->
+						<div class="col-md-2 form-group">
+							<label for="owners">Owners</label>
+							<input type="number" min="1" max="99" id="owners" class="form-control" placeholder="Owners" required>
+						</div>
+						<!-- select repairs -->
+						<div class="col-md-2 form-group">
+							<label for="repairs">Repairs</label>
+							<input type="number" min="0" max="99" id="repairs" class="form-control" placeholder="Repairs" required>
+						</div>
+					</div>
+					<div class="row">
+						<!-- select serial number-->
+						<div class="col-md-8 form-group">
+							<label for="serial-number">Serial Number</label>
+							<input type="text" id="serial-number" class="form-control" placeholder="NSXXXXXXX000001" required>
+						</div>
+						<!-- select assurance -->
+						<div class="col-md-4 form-group">
+							<label for="assurance">Assurance</label>
+							<input type="text" id="assurance" class="form-control" placeholder="Owner, Agency..." required>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<!-- select price -->
+						<div class="col-md-6 form-group">
+							<label for="price">Price</label>
+							<input type="number" id="price" class="form-control" placeholder="Price USD" required>
+						</div>
+					</div>
+				</div>
+				<div class="row mx-3 my-2 justify-content-end">
+					<input id="mainButton" type="submit" class="btn btn-primary" value="Save">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<div class="container-fluid mt-3 col-md-10">
+		<!-- show all cars -->
+		<table class="table table-striped table-hover">
+			<thead class="text-white text-center thead-dark">
+				<tr>
+					<th>Year</th>
+					<th>Model</th>
+					<th>Brand</th>
+					<th>Type</th>
+					<th>Serial Number</th>
+					<th>Color</th>
+					<th>Doors</th>
+					<th>Owners</th>
+					<th>Repairs</th>
+					<th>Assurance</th>
+					<th>USD</th>
+					<th colspan="2">Options</th>
+				</tr>
+			</thead>
+			<!-- JS magic -->
+			<tbody id="table-cars" class="text-center">
+			</tbody>
+		</table>
+	</div>
+
+	<!-- custom JS -->
+	<script src="../assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+/* global styles */
+* {
+	font-family: JetBrainsMno-Regular;
+}
+
+#main-container.card {
+	min-height: 175px;
+}
+
+#get-answers.main-btn {
+	visibility: hidden;
+}

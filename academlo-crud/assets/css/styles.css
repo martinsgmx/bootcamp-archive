@@ -1,0 +1,40 @@
+/* global styles */
+* {
+	font-family: JetBrainsMno-Regular;
+}
+
+tbody td {
+	white-space: nowrap;
+}
+
+/* font families */
+@font-face {
+	font-family: JetBrainsMono-Regular;
+	src: url('../fonts/JetBrainsMono-Regular.ttf')
+}
+
+/* text styles */
+.white-text {
+	color: #ffffff;
+}
+
+/* login screen */
+.bg-card {
+	background-image: url('../img/bg-img-login.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border-radius: 15px;
+	height: 100%;
+	min-height: 550px;
+	width: 100%;
+}
+
+.login-logo {
+	background-image: url('../img/logo.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 25%;
+	width: 100%;
+}
