@@ -1,6 +1,8 @@
-# Getting Started with Create React App
+# Simple conversion app 
+Simple conversion app degrees to radians. App crafted with ReactJS.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Preview
+![Preview](./doc/preview.png)
 
 ## Available Scripts
 
