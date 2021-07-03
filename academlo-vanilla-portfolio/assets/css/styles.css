@@ -1,0 +1,162 @@
+/*---	This styles thinking under 'Mobile first design'	----*/
+/*==========================================================*/
+
+/*------	global styles	------*/
+* {
+	font-family: JetBrainsMono-Regular;
+	margin: 0;
+	padding: 0;
+}
+
+/*------	font families ------*/
+@font-face {
+  font-family: JetBrainsMono-Regular;
+  src: url('../fonts/JetBrainsMono-Regular.ttf');
+}
+
+/*------	artifacts ------*/
+.img-project:hover .overlay {
+	top: 0;
+}
+
+.overlay {
+	align-items: center;
+	position: absolute;
+	display: flex;
+	overflow: hidden;
+	top: 100%;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background-color: rgba(0, 0 ,0, 0.7);
+	justify-content: center;
+}
+
+.soft-padding {
+	padding: .3rem;
+}
+
+/*------	background colors	------*/
+.bg_light-darkness {
+	background-color: #747883;
+}
+
+.bg_darkness {
+	background-color: #424B4B;
+}
+
+/*------	color items	------*/
+footer i:hover {
+	color: #FFFFFF;
+}
+
+.pink-item {
+	color: #FFC0CB;
+}
+
+.white-item {
+	color: #FFFFFF;
+}
+
+/*------	components	------*/
+.card {
+	background-color: #FFFFFF;
+	box-shadow: 0 .3rem .25rem #424B4B;
+	/* padding: 1rem; */
+}
+
+.card .card_content-padding {
+	padding: 1.5rem;
+}
+
+/*------	images	------*/
+img {
+	max-width: 100%;
+	min-height: 100%;
+}
+
+.bio-pic {
+	background-image: url('../../assets/img/profile.png');
+	background-position: center;
+	border-radius: 50%;
+	background-size: cover;
+	height: 150px;
+	margin:	auto;
+	width: 150px;
+}
+
+.img-project {
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+	min-height: 200px;
+	position: relative;
+}
+
+.virtual-piano {
+	background-image: url('../img/piano_project.png');
+}
+
+.wind-clock {
+	background-image: url('../img/wind-clock_project.png');
+}
+
+/*------	navbar	------*/
+.menu {
+	font-size: 1.3rem;
+}
+
+.nav {
+	display: flex;
+	justify-content: space-between;
+	background-color: transparent;
+}
+
+ul>li {
+	float: left;
+	padding: .7rem .5rem;
+}
+
+nav>ul {
+	list-style: none;
+}
+
+/*------	text colors	------*/
+.white-text {
+	color: #FFFFFF;
+}
+
+/*------	text format	------*/
+.content-text {
+	font-size: 1.5rem;
+}
+
+.text_align-center {
+	text-align: center;
+}
+
+.title-text {
+	font-size: 2rem;
+}
+
+/*------	css animations	------*/
+.typewriter {
+	overflow: hidden; 
+	border-right: .25rem solid #228855;
+	white-space: nowrap;
+	margin: 0 auto;
+	letter-spacing: .15em;
+	animation:
+		typing 1.9s steps(70, end),
+		blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+	from { width: 0 }
+	to { width: 100% }
+}
+
+@keyframes blink-caret {
+	from, to { border-color: transparent }
+	50% { border-color: #228855; }
+}
