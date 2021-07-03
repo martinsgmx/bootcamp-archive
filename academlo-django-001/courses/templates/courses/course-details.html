@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <style>
+        .card {
+            width: 900px;
+        }
+        .card-img-top {
+            max-width: 40%;
+        }
+        .avatar {
+            max-width: 18px;
+        }
+    </style>
+
+    <title>{{ course.name }}</title>
+</head>
+<body>
+<div class="container mt-3">
+    <a href="./" class="btn btn-danger">
+        < Back
+    </a>
+    <div class="row justify-content-center">
+        <div class="card text-center">
+            <div class="card-body">
+               <img alt="{{ course.name }}" class="card-img-top img-fluid rounded mt-3" src="{{ course.url_image }}"/>
+               <p class="card-title text-uppercase">
+                   <h2><strong>{{ course.name }}</strong></h2>
+                </p>
+                <hr />
+                <div class="text-center">
+                    <h4>About</h4>
+                    {{ course.about }}
+                </div>
+                <div class="text-start">
+                        Duration: <strong>{{ course.duration }}</strong> days
+                </div>
+                <hr/>
+                <div>
+                    <h4>Students</h4>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col"></th>
+                                <th scope="col">Name</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for student in students %}
+                            <tr>
+                                <th scope="row"> {{ student.id }}</th>
+                                <td class="text-center">
+                                    <img alt="{{ student.id }}" class="avatar" src="{{ student.url_image }}">
+                                </td>
+                                <td> {{ student.name }}</td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
