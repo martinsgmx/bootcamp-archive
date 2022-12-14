@@ -1,0 +1,29 @@
+html, body, #root {
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+	flex-wrap: wrap;
+}
+
+.App {
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {
+	background-image: url('./img/WeatherBackground.jpg');
+}
+
+.text-white {
+	color: #ffff;
+	-webkit-text-stroke: .05rem #8ebf42;
+}
+
+.box {
+	width: 50%;
+	border-radius: 10px 0;
+}
